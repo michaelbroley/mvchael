@@ -35,37 +35,6 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>Michael Broley</title>
-	
-	<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
-	
 </head>
 
 <body class="preloader-visible" data-barba="wrapper">
@@ -130,7 +99,8 @@ function includeHTML() {
         </div>
         <!-- header__bar end -->
 
-<!-- nav start -->
+
+        <!-- nav start -->
         <nav class="nav js-nav">
           <div class="nav__inner js-nav-inner">
             <div class="nav__bg js-nav-bg"></div>
@@ -150,16 +120,117 @@ function includeHTML() {
                 <div class="nav__content__left">
                   <div class="navList__wrap">
                     <ul class="navList js-navList">
-		  
-		  
-		  <!-- Pull in Nav -->
-		  
-		  <div w3-include-html="nav.html"></div> 
-		  
-		  <!-- End Nav-->
 						
-						
-						 </div>
+                      <li>
+                        <a data-barba href="about.html">
+                          About Michael
+                        </a>
+                      </li>
+
+						<li class="menu-item-has-children">
+                        <a>Services</a>
+
+                        <ul class="subnav-list">
+                          <li>
+                            <a data-barba href="services_business_strategy.html">Business Strategy</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_branding.html">Branding</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_shopify.html">Shopify Development</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_web.html">Web Development</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_content.html">Content Creation</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_sales.html">Sales Strategy</a>
+                          </li>
+                          <li>
+                            <a data-barba href="services_merch.html">Custom Merch</a>
+                          </li>
+                        </ul>
+                      </li>
+                      	
+                      <li>
+                        <a data-barba href="index.html">
+                          Case Studies
+                        </a>
+                      </li>
+
+                      	
+                      <li>
+                        <a data-barba href="clients.html">
+                          Select Clients
+                        </a>
+                      </li>
+
+                      	
+                      	
+                      <li>
+                        <a data-barba href="blog.html">
+                          Blog
+                        </a>
+                      </li>
+
+                      	
+                      <li>
+                        <a data-barba href="connect.html">
+                          Connect
+                        </a>
+                      </li>
+
+                    
+                      
+					   
+					  
+
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="nav__content__right">
+                  <div class="nav__info">
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Studio
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <p>
+                          173 Hyson Point Road, Mahone Bay, Nova Scotia, B0J 2E0
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Socials
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <a href="https://www.instagram.com/thrumikeslens/">Instagram</a>
+                        <a href="https://twitter.com/mahonebaymike">Twitter</a>
+						<a href="https://github.com/michaelbroley">GitHub</a>
+                        <a href="https://www.linkedin.com/in/mikebroley/">LinkedIn</a>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Contact
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <a href="#">hello@michaelbroley.com</a>
+                        <a href="#">+1 647 298 2445</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -167,8 +238,6 @@ function includeHTML() {
           </div>
         </nav>
         <!-- nav end -->
-		  
-       
       </header>
       <!-- header end -->
 
@@ -375,8 +444,7 @@ function includeHTML() {
   <!-- JavaScript -->
   <script src="js/vendors.js"></script>
   <script src="js/main.js"></script>
-  <scipt> includeHTML(); </scipt>
-	
+
 </body>
 
 </html>
